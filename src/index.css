@@ -68,6 +68,7 @@ img {
 /* Base Layout */
 #root {
   min-height: 100vh;
+  padding-top: 80px;
 }
 
 /* Utility Classes */
