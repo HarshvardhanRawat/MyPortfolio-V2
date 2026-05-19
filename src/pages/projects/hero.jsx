@@ -4,16 +4,6 @@ import './project.css';
 const Hero = () => {
   return (
     <section className="project-hero">
-      {/* Background Grid Lines */}
-      <div className="grid-background">
-        <div className="grid-column"></div>
-        <div className="grid-column"></div>
-        <div className="grid-column"></div>
-        <div className="grid-column"></div>
-        <div className="grid-column"></div>
-        <div className="grid-column"></div>
-      </div>
-
       {/* Content Layout */}
       <div className="hero-content-grid">
         {/* Header Row */}

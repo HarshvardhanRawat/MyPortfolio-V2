@@ -7,12 +7,10 @@ import AboutSection from './about';
 import Experience from './experience';
 import Stack from './stack';
 import CTA from '../../sections/cta';
-import GridBackground from '../../components/GridBackground';
 
 const AboutPage = () => {
   return (
     <>
-      <GridBackground />
       <Navbar />
       <main id="about-page">
         <AboutHero />

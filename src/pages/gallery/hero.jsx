@@ -4,18 +4,6 @@ import './gallery.css';
 const GalleryHero = () => {
     return (
         <section className="gallery-hero">
-            {/* Background 8-Column Grid Lines */}
-            <div className="grid-background-gallery">
-                <div className="gallery-grid-column"></div>
-                <div className="gallery-grid-column"></div>
-                <div className="gallery-grid-column"></div>
-                <div className="gallery-grid-column"></div>
-                <div className="gallery-grid-column"></div>
-                <div className="gallery-grid-column"></div>
-                <div className="gallery-grid-column"></div>
-                <div className="gallery-grid-column"></div>
-            </div>
-
             {/* Content Layout */}
             <div className="gallery-hero-content-grid">
                 {/* Header Row */}
