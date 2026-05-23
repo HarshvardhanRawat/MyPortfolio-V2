@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import BorderGlow from '../../components/borderglow/borderglow.jsx';
 
 const AboutSection = () => {
   return (
@@ -25,9 +27,11 @@ const AboutSection = () => {
           ></div>
           
           <div className="about-button-wrapper">
-             <button className="about-me-btn">
-               about me ↗
-             </button>
+             <BorderGlow borderRadius={0} backgroundColor="#000" glowRadius={30} className="btn-glow-wrapper">
+               <Link to="/about" className="about-me-btn">
+                 about me ↗
+               </Link>
+             </BorderGlow>
           </div>
         </div>
         

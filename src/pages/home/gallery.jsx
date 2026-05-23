@@ -1,4 +1,5 @@
 import React from 'react';
+import BorderGlow from '../../components/borderglow/borderglow.jsx';
 
 const galleryData = [
   // Column 1
@@ -50,6 +51,14 @@ const GallerySection = () => {
                 ))}
               </div>
             ))}
+          </div>
+
+          <div className="gallery-button-wrapper">
+            <BorderGlow borderRadius={0} backgroundColor="#000" glowRadius={30} className="btn-glow-wrapper">
+              <button className="gallery-btn">
+                view gallery ↗
+              </button>
+            </BorderGlow>
           </div>
         </div>
         

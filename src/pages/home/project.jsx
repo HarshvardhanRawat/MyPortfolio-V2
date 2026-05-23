@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectCard from '../../components/ProjectCard';
+import BorderGlow from '../../components/borderglow/borderglow.jsx';
 
 // Import local project assets
 import projectAbc from '../../assets/project_abc.png';
@@ -57,9 +58,11 @@ const ProjectSection = () => {
               A curated collection of digital experiences designed to be smooth, reliable, and highly customizable. Scroll to explore the featured work.
             </p>
             <div className="projects-btn-group">
-              <button className="projects-github-btn">
-                View All Projects
-              </button>
+              <BorderGlow borderRadius={0} backgroundColor="#000" glowRadius={30} className="btn-glow-wrapper">
+                <button className="projects-btn">
+                  all projects ↗
+                </button>
+              </BorderGlow>
             </div>
           </div>
         </div>
@@ -67,13 +70,13 @@ const ProjectSection = () => {
         {/* Right Side: Scrolling Project Cards */}
         <div className="projects-scroll-right">
           {projects.map((proj, index) => (
-            <div 
-              key={proj.id} 
+            <div
+              key={proj.id}
               className="project-scroll-item sticky-card"
-              style={{ 
-                position: 'sticky', 
-                top: `calc(15vh + ${index * 80}px)`, 
-                zIndex: index + 1 
+              style={{
+                position: 'sticky',
+                top: `calc(15vh + ${index * 80}px)`,
+                zIndex: index + 1
               }}
             >
               <ProjectCard

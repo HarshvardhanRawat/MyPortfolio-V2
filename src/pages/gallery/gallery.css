@@ -128,9 +128,12 @@
   .gallery-hero-title {
     padding-left: 1.5rem;
   }
+
   .gallery-main-grid {
-    grid-template-columns: repeat(4, 1fr); /* 2 portraits per row, or we could handle differently */
+    grid-template-columns: repeat(4, 1fr);
+    /* 2 portraits per row, or we could handle differently */
   }
+
   .gallery-card.portrait,
   .gallery-card.landscape {
     grid-column: span 2;
@@ -144,7 +147,7 @@
     padding: 0 1.5rem;
     margin-top: 2rem;
   }
-  
+
   .gallery-hero-title {
     padding-left: 0;
     font-size: 3rem;
@@ -157,7 +160,7 @@
   .gallery-main-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .gallery-card.portrait,
   .gallery-card.landscape {
     grid-column: span 1;
@@ -170,5 +173,3 @@
     font-size: 2.5rem;
   }
 }
-
-
