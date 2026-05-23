@@ -202,6 +202,13 @@
   overflow: hidden;
 }
 
+.about-portrait-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .about-portrait-placeholder::before {
   content: '';
   position: absolute;
@@ -209,6 +216,7 @@
   background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
   opacity: 0.15; /* Adds grain to match the moody photo aesthetic */
   mix-blend-mode: overlay;
+  pointer-events: none;
 }
 
 .about-text-content {
@@ -253,10 +261,10 @@
 @media (max-width: 992px) {
   .about-details-container {
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 40px;
   }
   
-  .about-photo-placeholder {
+  .about-photo-wrapper {
     max-width: 500px;
     margin: 0 auto;
   }
@@ -581,5 +589,54 @@
   }
   .about-hero-right {
     height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 60px 0 30px;
+  }
+
+  .about-page-title {
+    margin-bottom: 40px;
+    font-size: clamp(2rem, 7vw, 4rem);
+  }
+
+  .about-hero-content {
+    margin: 0 auto 40px;
+  }
+
+  .about-hero-stats {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .stats-section {
+    padding: 40px 0;
+  }
+
+  .stats-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-details-section {
+    padding: 50px 0;
+  }
+
+  .about-block {
+    gap: 30px;
+  }
+
+  .experience-section {
+    padding: 40px 0;
+  }
+
+  .stack-section {
+    padding: 40px 0;
+  }
+
+  .about-hero-right {
+    display: none;
   }
 }

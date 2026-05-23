@@ -1,9 +1,10 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css';
 
 const Navbar = () => {
   const indicatorRef = useRef(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     let ticking = false;
@@ -32,17 +33,38 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Prevent scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
+        <Link to="/" className="navbar-logo" onClick={() => setIsOpen(false)}>
           .rwt
         </Link>
-        <div className="navbar-links">
-          <Link to="/projects" className="nav-link">projects</Link>
-          <Link to="/about" className="nav-link">about</Link>
-          <Link to="/gallery" className="nav-link">gallery</Link>
-          <Link to="/contact" className="nav-link">contact</Link>
+        <button 
+          className={`navbar-toggle ${isOpen ? 'active' : ''}`} 
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div className={`navbar-links ${isOpen ? 'open' : ''}`}>
+          <Link to="/projects" className="nav-link" onClick={() => setIsOpen(false)}>projects</Link>
+          <Link to="/about" className="nav-link" onClick={() => setIsOpen(false)}>about</Link>
+          <Link to="/gallery" className="nav-link" onClick={() => setIsOpen(false)}>gallery</Link>
+          <Link to="/contact" className="nav-link" onClick={() => setIsOpen(false)}>contact</Link>
         </div>
         {/* Scroll Progress Indicator Line */}
         <div 

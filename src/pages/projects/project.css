@@ -2,7 +2,7 @@
 
 .project-hero {
   position: relative;
-  min-height: 100vh;
+  min-height: auto;
   width: 100%;
   background-color: transparent;
   overflow: hidden;
@@ -14,10 +14,10 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   flex-direction: column;
-  padding-top: 6rem;
+  padding-top: 8rem;
 }
 
 /* Header (Title & Icon) */
@@ -77,8 +77,8 @@
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   width: 100%;
-  margin-top: 15vh;
-  padding-bottom: 5rem;
+  margin-top: 8vh;
+  padding-bottom: 3rem;
 }
 
 .hero-description {
@@ -243,7 +243,6 @@
   background-color: var(--bg-primary);
 }
 
-/* Logos Responsive styling */
 @media (max-width: 1024px) {
   .logos-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -251,6 +250,12 @@
 
   .logos-bottom-icon {
     left: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  .logos-section {
+    display: none;
   }
 }
 
@@ -487,6 +492,27 @@
     grid-template-columns: repeat(2, 1fr);
     padding: 3rem 6%;
     gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card-overlay {
+    padding: 3.5rem 1.25rem 1.25rem 1.25rem;
+  }
+  .project-description {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  .tech-tag {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.5rem;
+  }
+  .project-links {
+    gap: 0.5rem;
+  }
+  .project-link-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
   }
 }
 

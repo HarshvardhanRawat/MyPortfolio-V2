@@ -125,8 +125,24 @@
 }
 
 @media (max-width: 768px) {
+  .cta-section {
+    padding: 50px 0;
+  }
+
+  .cta-header {
+    margin-bottom: 30px;
+  }
+
+  .cta-content {
+    gap: 30px;
+  }
+
   .cta-headline {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+
+  .cta-button-container {
+    margin-top: 20px;
   }
 
   .cta-decorative-target {

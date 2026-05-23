@@ -28,6 +28,26 @@
   --transition-smooth: all 0.6s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
+@media (max-width: 768px) {
+  :root {
+    --space-xs: 0.4rem;
+    --space-sm: 0.8rem;
+    --space-md: 1.5rem;
+    --space-lg: 2.5rem;
+    --space-xl: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --space-xs: 0.3rem;
+    --space-sm: 0.6rem;
+    --space-md: 1rem;
+    --space-lg: 1.8rem;
+    --space-xl: 2.8rem;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
