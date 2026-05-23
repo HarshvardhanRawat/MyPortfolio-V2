@@ -1,5 +1,7 @@
 import React from 'react';
 import { FiArrowUpRight } from 'react-icons/fi';
+import BorderGlow from '../components/borderglow/borderglow.jsx';
+import Magnet from '../components/magnet/magnet.jsx';
 import './cta.css';
 
 const CTA = () => {
@@ -19,10 +21,14 @@ const CTA = () => {
           </h2>
           
           <div className="cta-button-container">
-            <a href="mailto:harsh.r5983@gmail.com" className="cta-button">
-              <span>contact me</span>
-              <FiArrowUpRight className="cta-arrow" />
-            </a>
+            <Magnet magnetStrength={3} padding={50}>
+              <BorderGlow borderRadius={0} backgroundColor="#000" glowRadius={30} className="cta-glow-wrapper">
+                <a href="mailto:harsh.r5983@gmail.com" className="cta-button">
+                  <span>contact me</span>
+                  <FiArrowUpRight className="cta-arrow" />
+                </a>
+              </BorderGlow>
+            </Magnet>
           </div>
         </div>
 

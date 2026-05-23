@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaXTwitter, FaInstagram, FaGithub, FaPinterest, FaLinkedinIn } from 'react-icons/fa6';
+import Magnet from '../components/magnet/magnet.jsx';
 import './footer.css';
 
 const changingWords = ['design', 'create', 'build'];
@@ -41,11 +42,21 @@ const Footer = () => {
           <div className="contact-col">
             <span className="label">Social</span>
             <div className="social-icons">
-              <a href="https://x.com/HarshvardhanRaw" className="social-icon" target="_blank"><FaXTwitter size={20} /></a>
-              <a href="https://www.instagram.com/rawwithharsh" className="social-icon" target="_blank"><FaInstagram size={20} /></a>
-              <a href="https://www.linkedin.com/in/harshvardhan-rawat" className="social-icon" target="_blank"><FaLinkedinIn size={20} /></a>
-              <a href="https://github.com/dotrwt" className="social-icon" target="_blank"><FaGithub size={20} /></a>
-              <a href="https://in.pinterest.com/dotrwtt" className="social-icon" target="_blank"><FaPinterest size={20} /></a>
+              <Magnet magnetStrength={3} padding={30}>
+                <a href="https://x.com/dotrwt" className="social-icon" target="_blank"><FaXTwitter size={20} /></a>
+              </Magnet>
+              <Magnet magnetStrength={3} padding={30}>
+                <a href="https://www.instagram.com/rawwithharsh" className="social-icon" target="_blank"><FaInstagram size={20} /></a>
+              </Magnet>
+              <Magnet magnetStrength={3} padding={30}>
+                <a href="https://www.linkedin.com/in/harshvardhan-rawat" className="social-icon" target="_blank"><FaLinkedinIn size={20} /></a>
+              </Magnet>
+              <Magnet magnetStrength={3} padding={30}>
+                <a href="https://github.com/dotrwt" className="social-icon" target="_blank"><FaGithub size={20} /></a>
+              </Magnet>
+              <Magnet magnetStrength={3} padding={30}>
+                <a href="https://in.pinterest.com/dotrwtt" className="social-icon" target="_blank"><FaPinterest size={20} /></a>
+              </Magnet>
             </div>
           </div>
         </div>
