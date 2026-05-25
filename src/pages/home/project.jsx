@@ -8,7 +8,7 @@ const projects = [
     category: 'UniMap',
     image: 'https://res.cloudinary.com/dph28qrrx/image/upload/f_auto,q_auto/v1779727951/UM__UI_fpvu1d.png',
     description: "A student-focused campus navigation system designed to solve the problem of getting lost in large university campuses. It allows users to search for rooms using building names, floor numbers, landmarks, or digital identifiers and provides clear, structured directions for easy navigation.",
-    techStack: ['React', 'JS', 'Figma'],
+    techStack: ['React', 'JavaScript', 'Figma', 'Vercel'],
     projectUrl: 'https://unimap-lemon.vercel.app/',
     githubUrl: 'https://github.com/dotrwt/unimap'
   },
@@ -17,7 +17,7 @@ const projects = [
     category: 'Oak & Stay',
     image: 'https://res.cloudinary.com/dph28qrrx/image/upload/f_auto,q_auto/v1779728047/OaP_UI_evsb0m.png',
     description: "A property listing web app where users can discover and manage accommodations. Built as a learning project to get hands-on with full-stack development, auth, databases, image uploads, the works.",
-    techStack: ['EJS', 'Express', 'MongoDB', 'Cloudinary', 'JWT'],
+    techStack: ['EJS', 'Express', 'MongoDB', 'Cloudinary', 'Render'],
     projectUrl: 'https://rentalmarketplace.onrender.com/',
     githubUrl: 'https://github.com/dotrwt/Oak-and-Stay'
   },
@@ -26,7 +26,7 @@ const projects = [
     category: 'Cinemyth',
     image: 'https://res.cloudinary.com/dph28qrrx/image/upload/f_auto,q_auto/v1779728057/CN_UI_rcqi6o.png',
     description: "A platform for people who think too much about movies. Goes beyond just listings or ratings it's about the stories, themes, and ideas that make films stick with you.",
-    techStack: ['React', 'TypeScript', 'Figma', 'TailwindCSS'],
+    techStack: ['React', 'TypeScript', 'Figma', 'TailwindCSS', 'Vercel'],
     projectUrl: 'https://cinemyth.vercel.app/',
     githubUrl: 'https://github.com/dotrwt/Cinemyth'
   }
