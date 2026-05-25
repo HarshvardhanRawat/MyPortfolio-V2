@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './contact.css';
+import { sendEmail } from '../../utils/emailjs';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -7,15 +8,39 @@ const ContactForm = () => {
     email: '',
     message: ''
   });
+  
+  const [status, setStatus] = useState({
+    loading: false,
+    success: false,
+    error: null
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    setStatus({ loading: true, success: false, error: null });
+
+    const result = await sendEmail({
+      from_name: formData.name,
+      reply_to: formData.email,
+      message: formData.message,
+    });
+
+    if (result.success) {
+      setStatus({ loading: false, success: true, error: null });
+      setFormData({ name: '', email: '', message: '' }); // Reset form
+      
+      // Clear success message after 5 seconds
+      setTimeout(() => {
+        setStatus(prev => ({ ...prev, success: false }));
+      }, 5000);
+    } else {
+      setStatus({ loading: false, success: false, error: result.message });
+    }
   };
 
   return (
@@ -74,10 +99,22 @@ const ContactForm = () => {
           </div>
         </div>
 
+        {/* Status Messages */}
+        {status.success && (
+          <div className="contact-form-status success">
+            Thank you! Your message has been sent.
+          </div>
+        )}
+        {status.error && (
+          <div className="contact-form-status error">
+            {status.error}
+          </div>
+        )}
+
         {/* Submit Button Row */}
         <div className="contact-form-submit-row">
-          <button type="submit" className="contact-submit-btn">
-            Submit
+          <button type="submit" className="contact-submit-btn" disabled={status.loading}>
+            {status.loading ? 'Sending...' : 'Submit'}
           </button>
         </div>
 
