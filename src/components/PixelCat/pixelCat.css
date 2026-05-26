@@ -1,0 +1,105 @@
+/* src/components/PixelCat/pixelCat.css */
+
+.pixel-cat-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: auto;
+  user-select: none;
+}
+
+/* Cozy Cushion under the cat */
+.cat-cushion {
+  width: 48px;
+  height: 8px;
+  background-color: rgba(30, 30, 30, 0.6);
+  border-radius: 50%;
+  margin-top: -4px;
+  filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background-color 0.3s;
+}
+
+.pixel-cat-container:hover .cat-cushion {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Chat bubble for cat meows */
+.cat-speech-bubble {
+  position: absolute;
+  bottom: 55px;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 2px solid #000000;
+  white-space: nowrap;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 10000;
+}
+
+.cat-speech-bubble.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Triangle pointer for speech bubble */
+.cat-speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 4px 4px 0;
+  border-style: solid;
+  border-color: #ffffff transparent;
+  display: block;
+  width: 0;
+}
+
+.cat-speech-bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px 5px 0;
+  border-style: solid;
+  border-color: #000000 transparent;
+  display: block;
+  width: 0;
+  z-index: -1;
+}
+
+/* Pixel art rendering details */
+.pixel-cat-svg {
+  width: 44px;
+  height: 44px;
+  image-rendering: pixelated;
+  overflow: visible;
+  filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.4));
+  transition: transform 0.2s;
+}
+
+.pixel-cat-container:active .pixel-cat-svg {
+  transform: scale(0.95);
+}
+
+/* Hide on mobile devices to prevent blocking page elements */
+@media (max-width: 600px) {
+  .pixel-cat-container {
+    display: none;
+  }
+}

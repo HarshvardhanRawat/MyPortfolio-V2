@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import SmoothScroll from './components/SmoothScroll';
 import Preloader from './components/loader/Preloader';
+import PixelCat from './components/PixelCat/PixelCat';
 
 const Home = lazy(() => import('./pages/home/Home'));
 const AboutPage = lazy(() => import('./pages/about/AboutPage'));
@@ -52,6 +53,7 @@ export default function App() {
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </Suspense>
+          <PixelCat />
         </SmoothScroll>
       </BrowserRouter>
     </>
