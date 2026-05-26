@@ -11,7 +11,7 @@ const AboutSection = () => {
             <img
               src={optimizeCloudinaryUrl("https://res.cloudinary.com/dph28qrrx/image/upload/v1779475595/06_1_itqfzo.jpg")}
               alt="Profile-Picture"
-              loading="lazy" 
+              loading="lazy"
             />
           </div>
         </div>
@@ -23,8 +23,9 @@ const AboutSection = () => {
               <div className="block-line"></div>
             </div>
             <h3 className="block-text">
-              my craft is building immersive digital experiences through code, visuals, and
-              storytelling. i believe great design should feel human, intentional, and memorable
+              I’m Harshvardhan <br></br>
+              A full stack developer and creative designer focused on building immersive digital experiences through code, visuals, and
+              storytelling. I believe great design should feel human, intentional, and memorable
               where creativity and technology work together to create something meaningful
             </h3>
           </div>
