@@ -2,9 +2,6 @@ import React from 'react';
 import ProjectCard from '../../components/ProjectCard';
 import './project.css';
 
-// Import local project assets (generated mockups)
-import projectAbc from '../../assets/project_abc.png';
-import projectAllForOne from '../../assets/project_allforone.png';
 import projectTablet from '../../assets/project_tablet.png';
 
 const projects = [
