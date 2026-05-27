@@ -1,7 +1,7 @@
 import React from 'react';
 import './project.css';
 
-import unimapLogo from '../../assets/UNIMAP.png';
+import unimapLogo from '../../assets/UniMap.png';
 import aysLogo from '../../assets/AYS.webp';
 import cinemythLogo from '../../assets/CINEMYTH.webp';
 import zestLogo from '../../assets/ZEST.webp';
