@@ -40,7 +40,6 @@ const Socials = () => {
       url: 'https://pinterest.com/dotrwtt',
       icon: <FaPinterest size={20} />
     }
-
   ];
 
   return (

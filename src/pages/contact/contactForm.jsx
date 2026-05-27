@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './contact.css';
 import { sendEmail } from '../../utils/emailjs';
+import { ArrowRight, Check, Loader2 } from 'lucide-react';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -47,7 +48,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="contact-form-section">
+    <section className="contact-form-section animate-fade-in">
       <form onSubmit={handleSubmit} className="contact-form-grid">
         
         {/* Name Row */}
@@ -64,6 +65,7 @@ const ContactForm = () => {
               onChange={handleChange}
               autoComplete="off"
               required
+              placeholder="e.g. Jane Doe"
             />
           </div>
         </div>
@@ -82,6 +84,7 @@ const ContactForm = () => {
               onChange={handleChange}
               autoComplete="off"
               required
+              placeholder="jane@example.com"
             />
           </div>
         </div>
@@ -98,6 +101,7 @@ const ContactForm = () => {
               value={formData.message}
               onChange={handleChange}
               required
+              placeholder="Describe your project, ideas, or questions..."
             />
           </div>
         </div>
@@ -105,19 +109,41 @@ const ContactForm = () => {
         {/* Status Messages */}
         {status.success && (
           <div className="contact-form-status success">
-            Thank you! Your message has been sent.
+            <Check size={18} className="status-icon" />
+            <span>Thank you! Your message has been sent successfully.</span>
           </div>
         )}
         {status.error && (
           <div className="contact-form-status error">
-            {status.error}
+            <span>{status.error}</span>
           </div>
         )}
 
         {/* Submit Button Row */}
         <div className="contact-form-submit-row">
-          <button type="submit" className="contact-submit-btn" disabled={status.loading}>
-            {status.loading ? 'Sending...' : 'Submit'}
+          <button 
+            type="submit" 
+            className={`contact-submit-btn ${status.loading ? 'loading' : ''} ${status.success ? 'success' : ''}`}
+            disabled={status.loading || status.success}
+          >
+            <span className="btn-content">
+              {status.loading ? (
+                <>
+                  <Loader2 className="spinner" size={20} />
+                  <span>sending...</span>
+                </>
+              ) : status.success ? (
+                <>
+                  <Check size={20} />
+                  <span>sent!</span>
+                </>
+              ) : (
+                <>
+                  <span>Submit</span>
+                  <ArrowRight className="arrow" size={20} />
+                </>
+              )}
+            </span>
           </button>
         </div>
 
