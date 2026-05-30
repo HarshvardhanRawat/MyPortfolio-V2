@@ -17,7 +17,7 @@ const CTA = () => {
         <div className="cta-content">
           <h2 className="cta-headline">
             i'm open for projects and collaborations,<br />
-            feel free to email me to see how<br />
+            email me to see how
             can we collaborate
           </h2>
 
