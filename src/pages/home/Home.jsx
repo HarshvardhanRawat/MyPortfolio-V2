@@ -11,8 +11,8 @@ import './home.css';
 
 export default function Home() {
   useSEO({
-    title: 'Creative Developer & Designer',
-    description: 'Harshvardhan Rawat – Full Stack Developer & Designer. Visual storyteller building modern digital experiences with precision and craft.'
+    title: 'Home',
+    description: 'Harshvardhan Rawat (.rwt / dotrwt) – Full Stack Developer, Designer & Visual Storyteller. Explore the portfolio showcasing modern web experiences built with precision.'
   });
 
   return (

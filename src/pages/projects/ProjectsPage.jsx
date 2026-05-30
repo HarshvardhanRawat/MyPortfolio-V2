@@ -9,8 +9,8 @@ import useSEO from '../../hooks/useSEO';
 
 const ProjectsPage = () => {
   useSEO({
-    title: 'Work & Selected Projects',
-    description: 'Explore the portfolio and selected engineering and design works of Harshvardhan Rawat, including UniMap, Oak & Stay, and Cinemyth.'
+    title: 'Projects',
+    description: 'Explore the portfolio and selected engineering and design works of Harshvardhan Rawat (.rwt / dotrwt developer), including UniMap, Oak & Stay, and Cinemyth.'
   });
 
   return (

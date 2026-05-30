@@ -3,7 +3,23 @@ import { useEffect } from 'react';
 const useSEO = ({ title, description, canonicalUrl }) => {
   useEffect(() => {
     // 1. Update Title
-    const formattedTitle = title ? `${title} // dotrwt` : 'dotrwt // Portfolio';
+    let formattedTitle = 'Harshvardhan Rawat (dotrwt) | Portfolio & Developer';
+    if (title) {
+      const lowerTitle = title.toLowerCase().trim();
+      if (lowerTitle === 'home') {
+        formattedTitle = 'Home - dotrwt | Harshvardhan Rawat';
+      } else if (lowerTitle === 'about' || lowerTitle === 'about / bio') {
+        formattedTitle = 'about - dotrwt | Harshvardhan Rawat';
+      } else if (lowerTitle === 'projects' || lowerTitle === 'work & selected projects') {
+        formattedTitle = 'projects - dotrwt | Harshvardhan Rawat';
+      } else if (lowerTitle === 'gallery' || lowerTitle === 'visual gallery') {
+        formattedTitle = 'gallery - dotrwt | Harshvardhan Rawat';
+      } else if (lowerTitle === 'contact') {
+        formattedTitle = 'contact - dotrwt | Harshvardhan Rawat';
+      } else {
+        formattedTitle = `${title} - dotrwt | Harshvardhan Rawat`;
+      }
+    }
     document.title = formattedTitle;
 
     // Helper function to update meta tag content

@@ -11,8 +11,8 @@ import useSEO from '../../hooks/useSEO';
 
 const AboutPage = () => {
   useSEO({
-    title: 'About & Bio',
-    description: 'Learn about Harshvardhan Rawat, a creative full-stack developer and designer specialized in crafting custom high-performance digital products.'
+    title: 'About',
+    description: 'Learn about Harshvardhan Rawat (.rwt / dotrwt), a creative full-stack developer and designer crafting custom high-performance digital products.'
   });
 
   return (

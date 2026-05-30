@@ -10,7 +10,7 @@ import useSEO from '../../hooks/useSEO';
 export default function ContactPage() {
   useSEO({
     title: 'Contact',
-    description: "Get in touch with Harshvardhan Rawat. Let's build something exceptional together. Reach out via email, contact form, or connect on social platforms."
+    description: "Get in touch with Harshvardhan Rawat (.rwt / dotrwt developer). Let's build something exceptional together. Reach out via email, contact form, or connect on social platforms."
   });
 
   return (
